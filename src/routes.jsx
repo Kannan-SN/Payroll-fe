@@ -32,9 +32,10 @@ export const routes = [
     ],
   },
   {
-    title: "Account settings",
-    layout: "dashboard",
+    title: "auth pages",
+    layout: "auth",
     pages: [
+      ,
       {
         icon: <UserCircleIcon {...icon} />,
         name: "profile",

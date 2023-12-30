@@ -10,26 +10,50 @@ import { Link } from "react-router-dom";
 
 export function SignUp() {
   return (
-    <section className="m-8 flex">
+    <section className=" flex  ">
             <div className="w-2/5 h-full hidden lg:block">
         <img
-          src="/img/pattern.png"
-          className="h-full w-full object-cover rounded-3xl"
+          src="/public/img/pattern.jpg"
+          // className=" h-fit w-full object-cover rounded-3xl"
         />
       </div>
-      <div className="w-full lg:w-3/5 flex flex-col items-center justify-center">
+      <div className="w-full lg:w-3/5 mt-3">
         <div className="text-center">
-          <Typography variant="h2" className="font-bold mb-4">Join Us Today</Typography>
-          <Typography variant="paragraph" color="blue-gray" className="text-lg font-normal">Enter your email and password to register.</Typography>
+          <Typography variant="h5" className="font-bold mb-1">Logo</Typography>
+          <Typography variant="paragraph" color="blue-gray" className="text-lg  font-semibold">Create a Payroll X Account</Typography>
         </div>
-        <form className="mt-8 mb-2 mx-auto w-80 max-w-screen-lg lg:w-1/2">
-          <div className="mb-1 flex flex-col gap-6">
-            <Typography variant="small" color="blue-gray" className="-mb-3 font-medium">
-              Your email
+        <form className="mt-3 mb-2 mx-auto w-80 max-w-screen-lg lg:w-1/2">
+          <div className="mb-1 flex flex-col gap-3">
+          <Typography variant="small" color="blue-gray" className="-mb-1 font-medium">
+              Name
             </Typography>
             <Input
-              size="lg"
+              size="md"
+              placeholder="eg: Admin"
+              className=" !border-t-blue-gray-200 focus:!border-t-gray-900 "
+              labelProps={{
+                className: "before:content-none after:content-none",
+              }}
+            />
+            <Typography variant="small" color="blue-gray" className="-mb-1 font-medium">
+              Email
+            </Typography>
+            <Input
+              size="md"
               placeholder="name@mail.com"
+              className=" !border-t-blue-gray-200 focus:!border-t-gray-900 "
+              labelProps={{
+                className: "before:content-none after:content-none",
+              }}
+            />
+            <Typography variant="small" color="blue-gray" className="-mb-1 font-medium">
+              Password
+            </Typography>
+            <Input
+              type="password"
+              size="md"
+              icon={<i className="fas fa-lock" />}
+              placeholder="********"
               className=" !border-t-blue-gray-200 focus:!border-t-gray-900"
               labelProps={{
                 className: "before:content-none after:content-none",
@@ -54,12 +78,20 @@ export function SignUp() {
             }
             containerProps={{ className: "-ml-2.5" }}
           />
-          <Button className="mt-6" fullWidth>
-            Register Now
+          <Button className="mt-1" fullWidth>
+            Sign In
           </Button>
 
-          <div className="space-y-4 mt-8">
-            <Button size="lg" color="white" className="flex items-center gap-2 justify-center shadow-md" fullWidth>
+          <div className="flex items-center  justify-end gap-2 mt-2">
+           
+            <Typography variant="small" className="font-medium justify-start text-gray-900">
+              <a href="#">
+                Forgot Password
+              </a>
+            </Typography>
+          </div>
+          <div className="space-y-4 mt-1">
+            <Button size="md" color=" black" className="flex items-center gap-1 justify-center shadow-md" fullWidth>
               <svg width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <g clipPath="url(#clip0_1156_824)">
                   <path d="M16.3442 8.18429C16.3442 7.64047 16.3001 7.09371 16.206 6.55872H8.66016V9.63937H12.9813C12.802 10.6329 12.2258 11.5119 11.3822 12.0704V14.0693H13.9602C15.4741 12.6759 16.3442 10.6182 16.3442 8.18429Z" fill="#4285F4" />
@@ -73,16 +105,13 @@ export function SignUp() {
                   </clipPath>
                 </defs>
               </svg>
-              <span>Sign in With Google</span>
+              <span> Continue With Google</span>
             </Button>
-            <Button size="lg" color="white" className="flex items-center gap-2 justify-center shadow-md" fullWidth>
-              <img src="/img/twitter-logo.svg" height={24} width={24} alt="" />
-              <span>Sign in With Twitter</span>
-            </Button>
+           
           </div>
           <Typography variant="paragraph" className="text-center text-blue-gray-500 font-medium mt-4">
             Already have an account?
-            <Link to="/auth/sign-in" className="text-gray-900 ml-1">Sign in</Link>
+            <Link to="/auth/sign-in" className="text-gray-900 ml-1">Log in</Link>
           </Typography>
         </form>
 

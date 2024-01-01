@@ -79,7 +79,9 @@ export function SignUp() {
             containerProps={{ className: "-ml-2.5" }}
           />
           <Button className="mt-1" fullWidth>
-            Sign In
+            <Link to="auth/sign-in">
+            Sign Up
+            </Link>
           </Button>
 
           <div className="flex items-center  justify-end gap-2 mt-2">
